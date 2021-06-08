@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Preloader />
     <CommonHeader />
     <MobileMenu />
     <Nuxt />
@@ -12,12 +13,14 @@ import Vue from 'vue'
 import CommonFooter from '~/components/CommonFooter.vue'
 import CommonHeader from '~/components/CommonHeader.vue'
 import MobileMenu from '~/components/MobileMenu.vue'
+import Preloader from '~/components/Preloader.vue'
 
 export default Vue.extend({
   components: {
     CommonHeader,
     CommonFooter,
     MobileMenu,
+    Preloader
   },
 })
 </script>
