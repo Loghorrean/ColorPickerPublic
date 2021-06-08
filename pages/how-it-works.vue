@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="container">
     <h1>Как работает сервис</h1>
   </main>
 </template>

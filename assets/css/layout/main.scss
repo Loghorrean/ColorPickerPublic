@@ -1,0 +1,77 @@
+// BREAKPOINTS
+// SM - 36 em
+// MD - 48 em
+// LG - 62 em
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 120rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div[class^="col-"] {
+  width: 100%;
+  position: relative;
+  padding: 0 1.5rem;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@for $i from 1 to 12 {
+  .col-#{$i} {
+    max-width: 100 / 12 * $i * 1%;
+    flex: 0 0 100 / 12 * $i * 1%;
+  }
+
+  .col-sm-#{$i} {
+    @media (min-width: 36em) {
+      max-width: 100 / 12 * $i * 1%;
+      flex: 0 0 100 / 12 * $i * 1%;
+    }
+  }
+
+  .col-md-#{$i} {
+    @media (min-width: 48em) {
+      max-width: 100 / 12 * $i * 1%;
+      flex: 0 0 100 / 12 * $i * 1%;
+    }
+  }
+
+  .col-lg-#{$i} {
+    @media (min-width: 62em) {
+      max-width: 100 / 12 * $i * 1%;
+      flex: 0 0 100 / 12 * $i * 1%;
+    }
+  }
+
+  .offset-#{$i} {
+    margin-left: 100 / 12 * $i * 1%;
+  }
+
+  .offset-sm-#{$i} {
+    @media (min-width: 36em) {
+      margin-left: 100 / 12 * $i * 1%;
+    }
+  }
+
+  .offset-md-#{$i} {
+    @media (min-width: 48em) {
+      margin-left: 100 / 12 * $i * 1%;
+    }
+  }
+
+  .offset-lg-#{$i} {
+    @media (min-width: 62em) {
+      margin-left: 100 / 12 * $i * 1%;
+    }
+  }
+}
